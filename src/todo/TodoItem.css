@@ -1,49 +1,86 @@
 .TodoItem__li {
-    background-color: #FAFAFA;
+  padding: 1rem;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+    0 5px 15px 0 rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+
+  border-left: 0 solid #00ff99;
+  transition: border-left 300ms ease-in-out, padding-left 300ms ease-in-out;
+  background-color: #fafafa;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  /* transition: all 0.13s ease-in */
+  /* background-color: #FAFAFA;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 24px;
-    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
-  }
-  
-  .TodoItem__p {
-    margin: 24px 0 24px 24px;
-    width: calc(100% - 120px);
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 400;
-  }
-  .TodoItem__p--complete {
-    text-decoration: line-through;
-  }
-  
-  .TodoItem__icon {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 48px;
-    width: 48px;
-    font-size: 24px;
-    font-weight: bold;
-    /* background-color: #CCC; */
-  }
-  
-  .TodoItem__icon-check {
-    position: absolute;
-    left: 12px;
-  }
-  .TodoItem__icon-check--active {
-    color: #4caf50;
-  }
-  
-  .TodoItem__icon-delete {
-    position: absolute;
-    top: -24px;
-    right: 0;
-  }
-  .TodoItem__icon-delete:hover {
-    color: red;
-  }
+    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15); */
+  /* border-top-left-radius: 37px 140px;
+  border-top-right-radius: 23px 130px;
+  border-bottom-left-radius: 110px 19px;
+  border-bottom-right-radius: 120px 24px;
+
+  display: block;
+  position: relative;
+  border: solid 3px #6e7491; */
+  /* padding: 40px 60px; */
+  /* max-width: 800px; */
+  /* width: 70%; */
+  /* margin: 20px auto 0; */
+  /* font-size: 17px; */
+  /* line-height: 28px; */
+  /* transform: rotate(-1deg);
+  box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+  transition: all 0.13s ease-in; */
+}
+
+.TodoItem__li:hover {
+  /* transform: translateY(-10px) rotate(1deg);
+  box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3); */
+  padding-left: 0.5rem;
+  border-left: 0.5rem solid #00ff99;
+}
+
+.TodoItem__p {
+  margin: 24px 0 24px 24px;
+  width: calc(100% - 120px);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.TodoItem__p--complete {
+  text-decoration: line-through;
+}
+
+.TodoItem__icon {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 48px;
+  font-size: 24px;
+  font-weight: bold;
+  /* background-color: #CCC; */
+}
+
+.TodoItem__icon-check {
+  position: absolute;
+  left: 12px;
+}
+.TodoItem__icon-check--active {
+  color: #4caf50;
+}
+
+.TodoItem__icon-delete {
+  position: absolute;
+  top: -24px;
+  right: 0;
+}
+.TodoItem__icon-delete:hover {
+  color: red;
+}
