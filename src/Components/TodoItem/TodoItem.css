@@ -78,7 +78,7 @@
 
 .TodoItem__icon-delete {
   position: absolute;
-  top: -24px;
+  /* top: -24px; */
   right: 0;
 }
 .TodoItem__icon-delete:hover {
