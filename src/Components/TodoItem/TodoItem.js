@@ -2,18 +2,10 @@ import React from "react";
 import "./TodoItem.css";
 
 function TodoItem(props) {
-  const handleComplete = () => {
-    alert(`Todo completed: ${props.text}`);
-  };
-
-  const handleDelete = () => {
-    alert(`Todo deleted: ${props.text}`);
-  };
-
   return (
     <li className="TodoItem__li">
       <span
-        onClick={handleComplete}
+        onClick={props.onComplete}
         className={`TodoItem__icon TodoItem__icon-check ${
           props.completed && "TodoItem__icon-check--active"
         }`}
@@ -26,7 +18,7 @@ function TodoItem(props) {
         {props.text}
       </p>
       <span
-        onClick={handleDelete}
+        onClick={props.onDelete}
         className="TodoItem__icon TodoItem__icon-delete"
       >
         X
