@@ -1,12 +1,12 @@
 import React from "react";
-import { TodoCounter } from "../Components/TodoCounter/TodoCounter";
-import { TodoSearch } from "../Components/TodoSearch/TodoSearch";
+
 import { TodoList } from "../Components/TodoList/TodoList";
 import { TodoItem } from "../Components/TodoItem/TodoItem";
 import { TodoContext } from "../Context/TodoContext/index";
 import { Modal } from "../Modal";
 import { TodoButtonCreate } from "../Components/TodoButtonCreate/TodoButtonCreate";
 import { TodoForm } from "../TodoForm/TodoForm";
+import { TodoHeader } from "../Components/TodoHeader/TodoHeader";
 
 function AppUI() {
   const {
@@ -19,9 +19,7 @@ function AppUI() {
   } = React.useContext(TodoContext);
   return (
     <React.Fragment>
-      <TodoCounter />
-      <TodoSearch />
-
+      <TodoHeader />
       <TodoList>
         {loading && !searchedTodos.length && <p>¡Todo está listo!</p>}
         {searchedTodos.map((todo, i) => (

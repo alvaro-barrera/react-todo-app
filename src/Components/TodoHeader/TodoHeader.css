@@ -1,0 +1,6 @@
+.Header {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 31px;
+  align-content: center;
+}
