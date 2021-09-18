@@ -1,4 +1,4 @@
-# TODO app with React
+# To do application made in React js - By Álvaro Barrera
 
 ## Available Scripts
 
