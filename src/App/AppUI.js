@@ -21,11 +21,12 @@ function AppUI() {
     <React.Fragment>
       <TodoCounter />
       <TodoSearch />
+
       <TodoList>
         {loading && !searchedTodos.length && <p>¡Todo está listo!</p>}
-        {searchedTodos.map((todo) => (
+        {searchedTodos.map((todo, i) => (
           <TodoItem
-            key={todo.text}
+            key={i}
             text={todo.text}
             completed={todo.completed}
             onComplete={() => completeTodo(todo.text)}
@@ -35,7 +36,7 @@ function AppUI() {
       </TodoList>
       {openModal && (
         <Modal>
-          <TodoForm/>
+          <TodoForm />
         </Modal>
       )}
       <TodoButtonCreate setOpenModal={setOpenModal}></TodoButtonCreate>

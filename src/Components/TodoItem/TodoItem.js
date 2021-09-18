@@ -3,14 +3,14 @@ import "./TodoItem.css";
 
 function TodoItem(props) {
   return (
-    <li className="TodoItem__li">
+    <li className={`TodoItem__li ${props.completed && "TodoItem__li--complete"}`}>
       <span
         onClick={props.onComplete}
         className={`TodoItem__icon TodoItem__icon-check ${
           props.completed && "TodoItem__icon-check--active"
         }`}
       >
-        √
+        <i className='bx bx-badge-check'></i>
       </span>
       <p
         className={`TodoItem__p ${props.completed && "TodoItem__p--complete"}`}
@@ -21,7 +21,7 @@ function TodoItem(props) {
         onClick={props.onDelete}
         className="TodoItem__icon TodoItem__icon-delete"
       >
-        X
+        <i class='bx bx-trash'></i>
       </span>
     </li>
   );

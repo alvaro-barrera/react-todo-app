@@ -12,13 +12,15 @@ function TodoSearch() {
 
   return (
     <React.Fragment>
-      <input
-        onChange={onChangeSearch}
-        className="TodoSearch__search"
-        type="text"
-        placeholder="Search"
-        value={searchValue}
-      />
+      <div className="Search">
+        <input 
+         onChange={onChangeSearch}
+         className=""
+         type="search"
+         placeholder="Search"
+         value={searchValue}/>
+        <i class='bx bx-search-alt'></i>
+      </div>
     </React.Fragment>
   );
 }

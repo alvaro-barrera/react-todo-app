@@ -28,7 +28,7 @@ function TodoProvider(props) {
   }
   const addTodo = (text) => {
     const newTodos = [...todos];
-    newTodos.push({
+    newTodos.unshift({
       completed: false,
       text,
     });
@@ -37,7 +37,8 @@ function TodoProvider(props) {
   const completeTodo = (text) => {
     const todoIndex = todos.findIndex((todo) => todo.text === text);
     const newTodos = [...todos];
-    newTodos[todoIndex].completed = true;
+    let currencyState = newTodos[todoIndex].completed;
+    newTodos[todoIndex].completed = !currencyState;
     saveTodos(newTodos);
   };
 
