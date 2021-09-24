@@ -5,6 +5,7 @@
   --secondary: hsl(250, 84%, 60%);
   --white: hsl(0, 0%, 100%);
   --white-light: hsl(180, 3%, 100%);
+  --black: #07051a;
 }
 .App {
   text-align: center;
